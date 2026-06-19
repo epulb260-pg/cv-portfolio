@@ -1,0 +1,321 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,sans-serif;
+  background:#0b1120;
+  color:white;
+  overflow-x:hidden;
+}
+
+.bg-glow{
+  position:fixed;
+  border-radius:50%;
+  filter:blur(100px);
+  z-index:-1;
+}
+
+.glow1{
+  width:300px;
+  height:300px;
+  background:#22d3ee;
+  top:0;
+  right:0;
+  opacity:0.15;
+}
+
+.glow2{
+  width:250px;
+  height:250px;
+  background:#d4a017;
+  bottom:0;
+  left:0;
+  opacity:0.12;
+}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  padding:20px 8%;
+  background:rgba(11,17,32,0.85);
+  position:sticky;
+  top:0;
+  z-index:999;
+  backdrop-filter:blur(10px);
+}
+
+.logo{
+  color:#d4a017;
+  font-size:24px;
+  font-weight:bold;
+}
+
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:20px;
+}
+
+nav a{
+  text-decoration:none;
+  color:white;
+}
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:60px;
+  padding:40px 8%;
+}
+
+.hero-left img{
+  width:320px;
+  border-radius:24px;
+  border:3px solid #d4a017;
+}
+
+.badge{
+  color:#22d3ee;
+}
+
+h1{
+  font-size:72px;
+  color:#d4a017;
+  margin:10px 0;
+}
+
+h2{
+  margin-bottom:20px;
+}
+
+.container{
+  width:90%;
+  max-width:1100px;
+  margin:auto;
+}
+
+.card{
+  background:rgba(255,255,255,0.04);
+  padding:30px;
+  border-radius:20px;
+  margin-bottom:25px;
+  border:1px solid rgba(255,255,255,0.06);
+  backdrop-filter:blur(10px);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 0 30px rgba(34,211,238,0.08);
+}
+
+.card h3{
+  color:#d4a017;
+  margin-bottom:20px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+ul{
+  list-style:none;
+}
+
+ul li{
+  margin-bottom:10px;
+}
+
+.skill-box{
+  margin-bottom:25px;
+}
+
+.skill-info{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:10px;
+}
+
+.bar{
+  height:14px;
+  background:#1e293b;
+  border-radius:30px;
+  overflow:hidden;
+}
+
+.fill{
+  height:100%;
+  background:linear-gradient(90deg,#22d3ee,#d4a017);
+}
+
+.p95{width:95%;}
+.p90{width:90%;}
+.p85{width:85%;}
+.p80{width:80%;}
+
+footer{
+  text-align:center;
+  padding:70px 20px;
+}
+
+footer h3{
+  color:#d4a017;
+  margin-bottom:30px;
+  font-size:28px;
+}
+
+.socials{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-bottom:25px;
+}
+
+.social-card{
+  width:220px;
+  padding:24px;
+  text-decoration:none;
+  border-radius:18px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  transition:0.3s;
+}
+
+.social-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 0 20px rgba(34,211,238,0.15);
+}
+
+.social-icon{
+  display:flex;
+  justify-content:center;
+  margin-bottom:12px;
+}
+
+.social-icon svg{
+  width:36px;
+  height:36px;
+  fill:#22d3ee;
+}
+
+.social-card h4{
+  color:#22d3ee;
+  margin-bottom:8px;
+}
+
+.social-card p{
+  color:#94a3b8;
+  font-size:14px;
+}
+
+.email-text{
+  color:#94a3b8;
+  margin-bottom:16px;
+}
+
+footer span{
+  color:#64748b;
+}
+
+@media(max-width:768px){
+  .hero{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .hero-left img{
+  width:320px;
+  border-radius:24px;
+  border:3px solid #d4a017;
+  box-shadow:
+    0 0 15px rgba(212,160,23,0.25),
+    0 0 40px rgba(34,211,238,0.1);
+  transition:0.4s;
+}
+
+.hero-left img:hover{
+  transform:translateY(-8px);
+}
+
+  h1{
+    font-size:42px;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+}
+
+.location-card{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  background:rgba(255,255,255,0.03);
+  padding:20px;
+  border-radius:16px;
+}
+
+.location-icon{
+  width:60px;
+  height:60px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:50%;
+  background:rgba(34,211,238,0.08);
+}
+
+.location-icon svg{
+  width:30px;
+  fill:#22d3ee;
+}
+
+.location-card h4{
+  color:#d4a017;
+  margin-bottom:4px;
+}
+
+.location-card p{
+  color:#94a3b8;
+}
+
+.social-icon{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-bottom:15px;
+}
+
+.social-icon svg{
+  width:38px;
+  height:38px;
+  fill:#22d3ee;
+}
+
+.email-text{
+  margin-bottom:18px;
+  color:#94a3b8;
+  font-size:15px;
+}
+
+.fill{
+  height:100%;
+  background:linear-gradient(90deg,#22d3ee,#d4a017);
+  box-shadow:0 0 10px rgba(34,211,238,0.25);
+  animation:loadBar 1.5s ease;
+}
+
+@keyframes loadBar{
+  from{
+    width:0;
+  }
+}
